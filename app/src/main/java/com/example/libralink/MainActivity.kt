@@ -1,35 +1,25 @@
 package com.example.libralink
 
-import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.libralink.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)// to detect the icon id
+        val navController = findNavController(R.id.fragmentContainerView)// to detect the Fragment id
 
-        val navView: BottomNavigationView = binding.navView
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment,R.id.messagesFragment,R.id.profileFragment,R.id.optionsFragment))
+        setupActionBarWithNavController(navController,appBarConfiguration) // um die titel oben zu stellen
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        bottomNavigationView.setupWithNavController(navController)// to marge the bottomNavigationView with fragment
+
     }
 }
