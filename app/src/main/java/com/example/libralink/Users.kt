@@ -10,5 +10,7 @@ import androidx.room.PrimaryKey
 data class Users(
     @PrimaryKey(autoGenerate = true) val id : Int?,
     @ColumnInfo(name = "first_name") val first_name : String?,
-    @ColumnInfo(name = "last_name")val last_name : String?
+    @ColumnInfo(name = "last_name")val last_name : String?,
+ //   @PrimaryKey(name = "Email")val Email : Email?
+
 )
