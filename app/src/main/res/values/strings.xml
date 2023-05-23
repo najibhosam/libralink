@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">libralink</string>
-    <string-array name="Kategorie">
+    <string-array name="category">
         <item>January</item>
         <item>February</item>
         <item>March</item>
