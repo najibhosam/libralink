@@ -9,5 +9,6 @@ data class Books(
     @PrimaryKey(autoGenerate = true) val id: Int?,
     @ColumnInfo(name = "book_name") val BookName: String?,
     @ColumnInfo(name = "author_name") val AuthorName: String?,
-    @ColumnInfo(name = "price") val Price: Int?
+    @ColumnInfo(name = "price") val Price: Int?,
+    @ColumnInfo(name = "category") val category: String?
 )

@@ -9,8 +9,6 @@ import com.example.libralink.dataBase.BookDataBase
 
 
 class OptionsFragment : Fragment() {
-    private lateinit var binding : OptionsFragment
-    private lateinit var bookDB : BookDataBase
 
 
     override fun onCreateView(
