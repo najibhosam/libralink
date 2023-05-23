@@ -1,4 +1,4 @@
-package com.example.libralink.DataBase
+package com.example.libralink.dataBase
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

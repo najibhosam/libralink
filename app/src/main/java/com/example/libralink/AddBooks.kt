@@ -25,7 +25,6 @@ class AddBooks : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(AddBooksViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

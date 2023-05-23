@@ -1,10 +1,8 @@
-package com.example.libralink.DataBase
-
-import androidx.lifecycle.LiveData
+package com.example.libralink.dataBase
 
 class BookRepository(private val booksDao : BooksDao) {
 
-    val readAll : LiveData<List<Books>> = booksDao.readAll()
+    val readAll : List<Books> = booksDao.readAll()
 
     suspend fun addBooks(book : Books){
         booksDao.insert(book)

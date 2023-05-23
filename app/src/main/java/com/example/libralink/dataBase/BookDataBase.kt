@@ -1,4 +1,4 @@
-package com.example.libralink.DataBase
+package com.example.libralink.dataBase
 
 import androidx.room.Database
 import androidx.room.Room
